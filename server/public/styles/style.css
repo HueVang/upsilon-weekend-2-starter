@@ -5,6 +5,15 @@ body {
   background-color: #FCE6C9;
 }
 
+h1 {
+  transition: 1s ease-in-out;
+}
+
+h1:hover {
+  color: #FF34B3;
+  text-shadow: 3px 3px gray;
+}
+
 h2, p {
   color: #030303;
   font-family: 'Lemonada', Arial;
@@ -12,6 +21,22 @@ h2, p {
 
 .name {
   color: #FF4040;
+}
+
+/*.person {
+  transition: 1.5s ease-in-out;
+}
+
+.person:hover {
+  font-size: 125%;
+}*/
+
+@keyframes slideShowMove {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(0deg);}
+  50% {transform: rotate(10deg);}
+  75% {transform: rotate(-10deg);}
+  100% {transform: rotate(0deg);}
 }
 
 #slideShow {
@@ -23,12 +48,17 @@ h2, p {
   box-shadow: 8px 8px 8px gray;
 }
 
+.wiggle {
+  animation-name: slideShowMove;
+  animation-duration: 2s;
+}
+
 /*#slideShow {
   border: 5px solid red;
   box-shadow: 5px 5px gray;
 }*/
 
-.index {
+/*.index {
   height: 1.25em;
   width: 1.25em;
   display: inline-block;
@@ -37,19 +67,54 @@ h2, p {
   margin-top: 1em;
   margin-left: 0.5em;
   box-shadow: 4px 4px 4px gray;
+}*/
+
+.index {
+  height: 1.75em;
+  width: 2.2em;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  box-shadow: 4px 4px 4px gray;
 }
 
 .special {
   background-color: #00F5FF;
+  transition: background-color 0.5s ease;
+  box-shadow: 0px 5px 3px black;
+  position: relative;
+  top: -3px;
+}
+
+.buttonDown {
+  position: relative;
+  top: 10px;
 }
 
 button {
-  background-color: #00F5FF;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #FF34B3;
+  /*background-color: #00F5FF;*/
   margin: 2em;
   height: 3em;
-  width: auto;
+  width: 6em;
   box-shadow: 5px 5px 4px gray;
   border-radius: 8px;
+  font-family: Arial;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 10px 4px black;
+  /*transition: background-color 0.5s ease;*/
+  background-color: #00F5FF;
+  color: black;
+  position: relative;
+  top: -5px;
 }
 
 span {
@@ -60,4 +125,5 @@ span {
 #timeHolder {
   height: 2em;
   width: auto;
+  font-family: 'Audiowide', Arial;
 }
