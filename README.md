@@ -1,4 +1,18 @@
-# Running the Server
+# Carousel challenge
 
-This challenge will require you to setup and run the application in this repository.
-See the assignment directions if you need a refresher on how to run this.
+##Author
+
+* *Hue Vang*
+
+###Description
+###Base Mode
+
+Created a carousel that shows a person's GitHub, name, and their shoutout. Also has 'prev' and 'next' buttons to cycle through the people.
+
+###Hard Mode
+
+Added fadeIn & fadeOut effects.
+
+###Pro Mode
+
+Added a timer and setInterval function that switches to the next person every 10 seconds if no buttons are clicked.
